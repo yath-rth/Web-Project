@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timetable Generator</title>
+  </head>
+
+  <body>
+    <!-- START BUTTON -->
+    <header id="header">
+      <div id="start-container">
+        <button id="start-button">Start</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="control-panel">
+        <div id="domain-section">
+          <div class="pill-row">
+            <button>SCOPE</button>
+            <button>SCORE</button>
+            <button>SELECT</button>
+          </div>
+        </div>
+
+        <div id="dropdown-section">
+          <select id="domain-dropdown">
+            <option>Select Domain</option>
+          </select>
+
+          <select id="subject-dropdown">
+            <option>Select Subject</option>
+          </select>
+
+          <select id="slot-dropdown">
+            <option>Select Slot</option>
+          </select>
+        </div>
+
+        <div id="faculty-area">
+          <div id="faculty-select">
+            <h3>Select Faculties</h3>
+
+            <div class="faculty-list"></div>
+          </div>
+
+          <div id="faculty-priority">
+            <h3>Faculty Priority</h3>
+
+            <div class="priority-list"></div>
+          </div>
+        </div>
+
+        <div id="panel-buttons">
+          <button id="reset">Reset</button>
+
+          <button id="confirm">Confirm</button>
+        </div>
+      </section>
+
+      <section id="courses">
+        <div id="courses-header">
+          <h2>Your Courses</h2>
+
+        <div id="courses-body"></div>
+
+        <div id="courses-footer">
+          <button id="generate">Generate</button>
+
+          <button id="remove">Remove all</button>
+        </div>
+      </section>
+
+      <section id="timetable-section">
+        <h2>Your Timetables (Empty List)</h2>
+
+        <table border="1" cellpadding = "6px">
+          <thead>
+            <tr>
+              <th rowspan="2"></th>
+
+              <th>8</th>
+              <th></th>
+              <th></th>
+              <th>9</th>
+              <th></th>
+              <th></th>
+              <th>10</th>
+              <th></th>
+              <th></th>
+              <th>11</th>
+              <th></th>
+              <th></th>
+              <th>12</th>
+              <th></th>
+              <th></th>
+
+              <th>1</th>
+              <th></th>
+              <th></th>
+
+              <th>2</th>
+              <th></th>
+              <th></th>
+              <th>3</th>
+              <th></th>
+              <th></th>
+              <th>4</th>
+              <th></th>
+              <th></th>
+              <th>5</th>
+              <th></th>
+              <th></th>
+              <th>6</th>
+              <th></th>
+              <th></th>
+              <th>7</th>
+            </tr>
+
+            <tr>
+              <th colspan="15">Morning Theory</th>
+              <th colspan="3">Break</th>
+              <th colspan="16">Evening Theory</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- MONDAY -->
+            <tr>
+              <th rowspan="2">Mon</th>
+
+              <td colspan="3">A1</td>
+              <td colspan="3">F1</td>
+              <td colspan="3">D1</td>
+              <td colspan="3">TB1</td>
+              <td colspan="3">TG1</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="3">A2</td>
+              <td colspan="3">F2</td>
+              <td colspan="3">D2</td>
+              <td colspan="3">TB2</td>
+              <td colspan="4">TG2</td>
+            </tr>
+
+            <tr>
+              <td colspan="6">L1+L2</td>
+              <td colspan="6">L3+L4</td>
+              <td colspan="3">L5+L6</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="6">L31+L32</td>
+              <td colspan="6">L33+L34</td>
+              <td colspan="4">L35+L36</td>
+            </tr>
+
+            <!-- TUESDAY -->
+            <tr>
+              <th rowspan="2">Tue</th>
+
+              <td colspan="3">B1</td>
+              <td colspan="3">G1</td>
+              <td colspan="3">E1</td>
+              <td colspan="3">TC1</td>
+              <td colspan="3">TAA1</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="3">B2</td>
+              <td colspan="3">G2</td>
+              <td colspan="3">E2</td>
+              <td colspan="3">TC2</td>
+              <td colspan="4">TAA2</td>
+            </tr>
+
+            <tr>
+              <td colspan="6">L7+L8</td>
+              <td colspan="6">L9+L10</td>
+              <td colspan="3">L11+L12</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="6">L37+L38</td>
+              <td colspan="6">L39+L40</td>
+              <td colspan="4">L41+L42</td>
+            </tr>
+
+            <!-- WEDNESDAY -->
+            <tr>
+              <th rowspan="2">Wed</th>
+
+              <td colspan="3">C1</td>
+              <td colspan="3">A1</td>
+              <td colspan="3">F1</td>
+              <td colspan="6"></td>
+
+              <td colspan="3"></td>
+
+              <td colspan="3">C2</td>
+              <td colspan="3">A2</td>
+              <td colspan="3">F2</td>
+              <td colspan="3">TD2</td>
+              <td colspan="4">TBB2</td>
+            </tr>
+
+            <tr>
+              <td colspan="6">L13+L14</td>
+              <td colspan="6">L15+L16</td>
+              <td colspan="3">L17+L18</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="6">L43+L44</td>
+              <td colspan="6">L45+L46</td>
+              <td colspan="4">L47+L48</td>
+            </tr>
+
+            <!-- THURSDAY -->
+            <tr>
+              <th rowspan="2">Thu</th>
+
+              <td colspan="3">D1</td>
+              <td colspan="3">B1</td>
+              <td colspan="3">G1</td>
+              <td colspan="3">TE1</td>
+              <td colspan="3">TCC1</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="3">D2</td>
+              <td colspan="3">B2</td>
+              <td colspan="3">G2</td>
+              <td colspan="3">TE2</td>
+              <td colspan="4">TCC2</td>
+            </tr>
+
+            <tr>
+              <td colspan="6">L19+L20</td>
+              <td colspan="6">L21+L22</td>
+              <td colspan="3">L23+L24</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="6">L49+L50</td>
+              <td colspan="6">L51+L52</td>
+              <td colspan="4">L53+L54</td>
+            </tr>
+
+            <!-- FRIDAY -->
+            <tr>
+              <th rowspan="2">Fri</th>
+
+              <td colspan="3">E1</td>
+              <td colspan="3">C1</td>
+              <td colspan="3">TA1</td>
+              <td colspan="3">TF1</td>
+              <td colspan="3">TD1</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="3">E2</td>
+              <td colspan="3">C2</td>
+              <td colspan="3">TA2</td>
+              <td colspan="3">TF2</td>
+              <td colspan="4">TDD2</td>
+            </tr>
+
+            <tr>
+              <td colspan="6">L25+L26</td>
+              <td colspan="6">L27+L28</td>
+              <td colspan="3">L29+L30</td>
+
+              <td colspan="3"></td>
+
+              <td colspan="6">L55+L56</td>
+              <td colspan="6">L57+L58</td>
+              <td colspan="4">L59+L60</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- RIGHT PANEL -->
+        <aside id="timetable-right">
+          <div id="faculty-info"></div>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
