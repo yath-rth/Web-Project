@@ -44,12 +44,15 @@ body {
 
 #faculty-area {
   margin-top: 15px;
+  display: flex;
+  gap: 4%;
+  flex-wrap: wrap;
 }
 
 #faculty-select,
 #faculty-priority {
-  width: 48%;
-  display: inline-block;
+  flex: 1 1 320px;
+  min-width: 280px;
   vertical-align: top;
   padding: 10px;
   background-color: aliceblue;
@@ -71,6 +74,26 @@ body {
   margin-left: 10px;
   background-color: white;
   border: 1px solid black;
+}
+
+button {
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: none;
+}
+
+button:focus-visible {
+  outline: 2px solid #1f5fa9;
+  outline-offset: 2px;
 }
 
 #courses {
@@ -132,4 +155,15 @@ thead {
 
 #faculty-info {
   min-height: 50px;
+}
+
+@media (max-width: 720px) {
+  #faculty-area {
+    gap: 10px;
+  }
+
+  #faculty-select,
+  #faculty-priority {
+    min-width: 100%;
+  }
 }
